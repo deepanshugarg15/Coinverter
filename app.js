@@ -71,7 +71,8 @@ exchangeIcon.addEventListener("click", () => {
     fromCurr.value = toCurr.value;
     toCurr.value = temp;
 
-    updateFlag();
+    updateFlag(fromCurr);
+    updateFlag(toCurr);
 });
 
 
