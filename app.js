@@ -67,12 +67,14 @@ const updateExchangeRate = async () => {
 };
 
 exchangeIcon.addEventListener("click", () => {
+    evt.preventDefault();
     let temp = fromCurr.value;
     fromCurr.value = toCurr.value;
     toCurr.value = temp;
 
     updateFlag(fromCurr);
     updateFlag(toCurr);
+    updateExchangeRate();
 });
 
 
